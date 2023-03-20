@@ -1,0 +1,93 @@
+.main-products-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 0 15px;
+  column-gap: 16px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.products-item-container {
+  flex-shrink: 0;
+  width: 230px;
+}
+
+.products-item-content {
+  $item-width: 230px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.variant-1 {
+    height: $item-width;
+  }
+
+  &.variant-2 {
+    // $size-height: $item-width + 98px;
+    height: $item-width + 98px;
+    // height: $size-height;
+  }
+}
+
+.products-item-btn {
+  margin: 20px 10px;
+  border-radius: 100px;
+  border: none;
+  color: $primary-color;
+  background-color: white;
+  padding: 12px 32px 12px 40px;
+  font-family: 'Neogrotesk Ess';
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.products-item-name {
+  font-family: 'Filson Pro';
+  font-size: 15px;
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.products-item-description {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-item-content,
+.products-item-rating,
+.products-item-price,
+.products-item-stars-content {
+  font-size: 13px;
+}
+
+.products-item-stars-content {
+  color: #FFC658;
+}
+
+.products-item-rating {
+  color: $text-secondary;
+}
+
+.products-item-price {
+  font-family: 'Filson Pro';
+  font-weight: 500;
+
+  &.min-price {
+    color: $text-secondary;
+    text-decoration: line-through;
+  }
+}

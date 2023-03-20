@@ -1,0 +1,14 @@
+.main-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.all-products-btn {
+  width: 237px;
+  border-radius: 100px;
+  padding: 12px 32px;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  text-transform: uppercase;
+}

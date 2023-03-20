@@ -1,0 +1,96 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: $primary-color-variant-2;
+  display: flex;
+  justify-content: center;
+}
+
+.header-text {
+  font-family: 'Abhaya Libre';
+  font-size: 13px;
+  margin-top: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.footer {
+  background: url("../assets/Union.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title, .footer-text {
+  text-align: center;
+}
+
+.footer-title {
+  font-family: 'Abhaya Libre';
+  font-size: 34px;
+  font-weight: 700;
+  width: 567px;
+  margin-bottom: 0px;
+}
+
+.footer-text {
+  font-family: 'Filson Pro';
+  font-size: 15px;
+  font-weight: 350;
+  color: $text-secondary;
+  max-width: 340px;
+  margin-bottom: 30px;
+}
+
+.footer-subs {
+  display: flex;
+  column-gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 5px;
+  width: 100%;
+}
+
+.subs-input, .subs-btn {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.subs-input {
+  border: 2px solid $primary-color;
+  width: 50%;
+}
+
+.subs-btn {
+  min-width: 80px;
+  background-color: $primary-color;
+  border: none;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
