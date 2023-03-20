@@ -1,3 +1,21 @@
 $primary-color-variant-2: #FFDCD3;
 $primary-color: #EFA693;
-$text-secondary: #939393; 
+$text-secondary: #939393;
+
+@mixin small {
+  @media only screen and (max-width: 500px) {
+    @content
+  }
+}
+
+@mixin medium {
+  @media only screen and (max-width: 1040px) {
+    @content
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1440px) {
+    @content
+  }
+}
