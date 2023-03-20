@@ -75,11 +75,6 @@ html, body {
 }
 
 .footer-subs {
-  display: flex;
-  column-gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-  row-gap: 5px;
   width: 100%;
 
   @include small {
@@ -94,6 +89,14 @@ html, body {
       margin: auto
     }
   }
+}
+
+.subs-container {
+  display: flex;
+  column-gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 5px;
 }
 
 .subs-input, .subs-btn {
@@ -115,4 +118,10 @@ html, body {
   &:hover {
     cursor: pointer;
   }
+}
+
+.subs-success {
+  color: #4eb172;
+  text-align: center;
+  display: none;
 }

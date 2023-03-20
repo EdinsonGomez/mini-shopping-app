@@ -7,3 +7,16 @@ window.addEventListener("load", async () => {
 
   productsActionController();
 });
+
+document.querySelector("#subs-form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  const emailElement = document.getElementById("subs-email");
+
+  if (emailElement.value) {
+    const msgElement = document.querySelector("#subs-msg");
+    msgElement.style.display = "block";
+
+    emailElement.value = "";
+  }
+})
