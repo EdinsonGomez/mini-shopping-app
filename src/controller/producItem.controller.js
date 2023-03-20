@@ -24,11 +24,11 @@ export default class ProductItem {
     itemContentElement.style.backgroundImage = `url(${this.image})`;
     itemContentElement.classList.add(`variant-${this.#variant}`);
 
-    const btnItemElement = element.querySelector(".products-item-btn");
-    btnItemElement.innerHTML = this.#variant === 1 ? "Add card" : "See more";
-
-    const nameElement = element.querySelector(".products-item-name");
-    nameElement.innerHTML = this.name;
+    this.#addValueToElement(element, ".products-item-btn", this.#variant === 1 ? "Add card" : "See more");
+    this.#addValueToElement(element, ".products-item-name", this.name);
+    this.#addValueToElement(element, ".products-item-rating", `(${this.rating})`);
+    this.#addValueToElement(element, ".min-price", this.minPrice);
+    this.#addValueToElement(element, ".max-price", this.maxPrice);
 
     const starsNumber = Math.ceil(this.rating / 100);
     const starsListElements = Array.from({ length: starsNumber }, () => {
@@ -38,11 +38,12 @@ export default class ProductItem {
     });
 
     element.querySelector(".products-item-stars-content").append(...starsListElements);
-    element.querySelector(".products-item-rating").innerHTML = `(${this.rating})`;
-
-    element.querySelector(".min-price").innerHTML = this.minPrice;
-    element.querySelector(".max-price").innerHTML = this.maxPrice;
 
     return element;
+  }
+
+  #addValueToElement(parentElment, id, value) {
+    const element = parentElment.querySelector(id);
+    element.innerHTML = value;
   }
 }
