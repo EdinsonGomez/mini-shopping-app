@@ -1,5 +1,7 @@
 .main-header {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 .main-header-title-content, .main-list-actions {
@@ -16,12 +18,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 335px;
 
   p {
     font-size: 34px;
     font-weight: 700;
     font-family: 'Abhaya Libre';
     margin: 0;
+  }
+
+  @include small {
+    p {
+      font-size: 28px;
+    }
   }
 }
 
@@ -33,8 +42,8 @@
 }
 
 .list-action-content {
-  width: 50px;
-  height: 14px;
+  width: 60px;
+  height: 15px;
   border-radius: 100px;
   background-color: $primary-color-variant-2;
   position: relative;
@@ -45,7 +54,7 @@
   }
 
   .list-action-icon {
-    $size: 20px;
+    $size: 25px;
     width: $size;
     height: $size;
     border-radius: 50%;

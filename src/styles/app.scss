@@ -54,6 +54,11 @@ html, body {
   font-weight: 700;
   width: 567px;
   margin-bottom: 0px;
+
+  @include small {
+    font-size: 28px;
+    width: 328px;
+  }
 }
 
 .footer-text {
@@ -63,15 +68,35 @@ html, body {
   color: $text-secondary;
   max-width: 340px;
   margin-bottom: 30px;
+
+  @include small {
+    max-width: 328px;
+  }
 }
 
 .footer-subs {
+  width: 100%;
+
+  @include small {
+    flex-direction: column;
+
+    .subs-input {
+      width: 100%;
+    }
+
+    .subs-btn {
+      width: 70%;
+      margin: auto
+    }
+  }
+}
+
+.subs-container {
   display: flex;
   column-gap: 5px;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 5px;
-  width: 100%;
 }
 
 .subs-input, .subs-btn {
@@ -93,4 +118,10 @@ html, body {
   &:hover {
     cursor: pointer;
   }
+}
+
+.subs-success {
+  color: #4eb172;
+  text-align: center;
+  display: none;
 }

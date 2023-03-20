@@ -52,10 +52,16 @@
             if you are missing something and don't want to miss future promotions
             or our future products
           </p>
-          <div class="footer-subs">
-            <input id="subs-input" class="subs-input" placeholder="Your Email" />
-            <button id="subs-btn" class="subs-btn">Send</button>
-          </div>
+          <form id="subs-form" class="footer-subs">
+            <div class="subs-container">
+              <input id="subs-email" type="email" class="subs-input" placeholder="Your Email" />
+              <button id="subs-btn" type="submit" class="subs-btn">Send</button>
+            </div>
+            <p id="subs-msg" class="subs-success">
+              <i class="fa-solid fa-check"></i>
+              Subscribed
+            </p>
+          </form>
         </div>
       </footer>
     </div>
