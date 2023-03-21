@@ -2,6 +2,8 @@
 
 The project was developed with Vanilla JS, [Sass](https://sass-lang.com/) and [webpack](https://webpack.js.org/)
 
+Live version: [Mini shopping App](https://mini-shopping-app.vercel.app/)
+
 ## Install project
 
 Follow these steps to install:
